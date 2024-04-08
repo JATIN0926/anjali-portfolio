@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "image_src": "/Financier.svg",
+      "title": "Financier - A money manager",
+      "description": "The idea and challenge is to incorporate all financial functionalities into a single app. I had to carefully balance simplicity with complexity to ensure users could easily navigate and utilize every feature.",
+      "link": "https://www.behance.net/gallery/174519889/Financier-A-Money-management-app"
+    },
+    {
+      "image_src": "/fintrack.svg",
+      "title": "Fintrack - Money transfer app",
+      "description": "The idea and challenge is to incorporate all financial functionalities into a single app. I had to carefully balance simplicity with complexity to ensure users could easily navigate and utilize every feature.",
+      "link": "https://dribbble.com/shots/21685074--Fintrack-Catch-the-Groove-of-Seamless-Money-Transfers"
+    },
+    {
+      "image_src": "/focus_matrix.svg",
+      "title": "Focus Matrix - A Productivity management.",
+      "description": "The idea and challenge is to incorporate all financial functionalities into a single app. I had to carefully balance simplicity with complexity to ensure users could easily navigate and utilize every feature.",
+      "link": "https://www.figma.com/proto/3BFllrcoZuu9iiOeBSG11X/Great-designer-instagram-post?type=design&node-id=398-893&t=4v92TbGllYZ8pPhE-0&scaling=min-zoom&page-id=0%3A1&fuid=1340230875902518163"
+    },
+    {
+      "image_src": "/coalporter.svg",
+      "title": "Coalporter - Coal Import Business",
+      "description": "The idea and challenge is to incorporate all financial functionalities into a single app. I had to carefully balance simplicity with complexity to ensure users could easily navigate and utilize every feature.",
+      "link": "https://www.figma.com/proto/3BFllrcoZuu9iiOeBSG11X/Great-designer-instagram-post?type=design&node-id=398-1607&t=4v92TbGllYZ8pPhE-0&scaling=min-zoom&page-id=0%3A1"
+    },
+    {
+      "image_src": "/Vama.svg",
+      "title": "VAMA - An astrologer",
+      "description": "The idea and challenge is to incorporate all financial functionalities into a single app. I had to carefully balance simplicity with complexity to ensure users could easily navigate and utilize every feature.",
+      "link": "https://www.figma.com/proto/3BFllrcoZuu9iiOeBSG11X/Great-designer-instagram-post?type=design&node-id=398-1823&t=4v92TbGllYZ8pPhE-0&scaling=min-zoom&page-id=0%3A1"
+    },
+    {
+      "image_src": "/masterCollection.svg",
+      "title": "Figma master collection - Featuring All Designs",
+      "description": "The idea and challenge is to incorporate all financial functionalities into a single app. I had to carefully balance simplicity with complexity to ensure users could easily navigate and utilize every feature.",
+      "link": "https://www.figma.com/file/7kZ8VZ3YACt1Zw6Qszodvw/Anjali's-portfolio?type=design&mode=design&t=gF0zL7QORT9hkFHt-0"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+.arrow_bounce{
+    animation:  bounce 2s linear infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(-18%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+/* 
+.test::before{
+  content: "";
+  position: absolute;
+  right: 35%;
+  height: 66vh;
+  width: 8%;
+  background-color: white;
+  mix-blend-mode: difference;
+  transform: rotate(45deg);
+  animation: fade_in 3.6s ease;
+}
+@keyframes fade_in {
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+}
+
+@media (min-width:500px) and (max-width:600px) {
+  .test::before{
+    height: 35vh;
+  }
+}
+@media (min-width:600px) and (max-width:800px) {
+  .test::before{
+    height: 42vh;
+  }
+}
+@media (min-width:800px) and (max-width:1000px) {
+  .test::before{
+    height: 50vh;
+  }
+}
+@media (min-width:1000px) and (max-width:1099px) {
+  .test::before{
+    height: 54vh;
+  }
+}
+@media (min-width:1100px) and (max-width:1200px) {
+  .test::before{
+    height: 49vh;
+  }
+} */

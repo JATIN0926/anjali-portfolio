@@ -1,0 +1,4 @@
+.view_work:hover .arrow_btn_right{
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
