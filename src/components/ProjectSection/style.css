@@ -1,4 +1,10 @@
+
 .view_work:hover .arrow_btn_right{
     transform: translateX(5px);
+    filter: invert(100%);
     transition: all 0.3s ease;
+}
+.view_work:hover{
+    background-color: white;
+    color: black;
 }

@@ -1,13 +1,16 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import NavItem from "../Animations/NavItem";
+import { Link } from "react-scroll";
 const Navbar = () => {
   const variants = {
-    hidden: { opacity: 0, y: -100, scale: 1.2 },
-    enter: { opacity: 1, y: 0, scale: 1 },
+    hidden: { opacity: 0 },
+    enter: { opacity: 1 },
   };
   return (
     <motion.div
+      id="nav"
       initial="hidden"
       animate="enter"
       variants={variants}
@@ -18,10 +21,25 @@ const Navbar = () => {
         Hi. I am Anjali
       </h1>
       <div className="flex items-center justify-between gap-16 text-xs laptop:text-sm tbPortrait:text-base tbMed:text-lg tbLandscape:text-xl">
-        <h3>Objectives</h3>
-        <h3>Projects</h3>
-        <h3>Skills</h3>
-        <h3>Contact</h3>
+        <Link to="desc" spy={true} smooth={true} duration={500}>
+          <NavItem text="Objectives" />
+        </Link>
+        <Link
+          to="projects"
+          spy={true}
+          offset={100}
+          smooth={true}
+          duration={500}
+        >
+          <NavItem text="Projects" />
+        </Link>
+        <a href="/Resume.pdf" download>
+          <NavItem text="Resume" />
+        </a>
+
+        <Link to="contact" spy={true} smooth={true} duration={500}>
+          <NavItem text="Contact" />
+        </Link>
       </div>
     </motion.div>
   );
