@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Scroll_down from "../Scroll_down/Scroll_down";
@@ -31,7 +31,7 @@ const Hero = () => {
         <Link
           to="projects"
           spy={true}
-          offset={100}
+          offset={-40}
           smooth={true}
           duration={500}
         >
@@ -49,7 +49,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div className="flex basis-6/12 flex-col items-end justify-start gap-4 self-start">
-        <div className="flex test flex-col items-end justify-center gap-3 uppercase text-4xl mbSmall:text-5xl mbMedium:text-6xl laptop:text-7xl tbPortrait:text-8xl tbMed:text-9xl tbLandscape:text-[9.5rem] font-medium relative">
+        <div className="flex test flex-col items-end justify-center gap-3 uppercase text-4xl mbSmall:text-5xl mbMedium:text-6xl laptop:text-7xl tbPortrait:text-8xl tbMed:text-[7rem] tbLandscape:text-[9.5rem] font-medium relative tracking-tighter">
           <motion.h1
             initial="hidden"
             animate="enter"
@@ -83,7 +83,7 @@ const Hero = () => {
           animate="enter"
           transition={{ ease: "easeOut", delay: 0.8, duration: 1.2 }}
           variants={variants}
-          className="text-[0.6rem] leading-4 mbSmall:text-sm mbMedium:text-base laptop:text-lg tbPortrait:text-lg  tbMed:text-2xl tbLandscape:text-[1.7rem] font-medium"
+          className="text-[0.6rem] leading-4 mbSmall:text-sm mbMedium:text-base laptop:text-lg tbPortrait:text-[1rem]  tbMed:text-lg tbLandscape:text-[1.7rem] font-medium"
         >
           Let’s make your Product visible
         </motion.p>

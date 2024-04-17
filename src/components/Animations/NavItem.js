@@ -13,7 +13,7 @@ const NavItem = ({ text }) => {
       <motion.h3
         initial={{ opacity: 1 }}
         animate={{ opacity: isHovered ? 0 : 1, y: isHovered ? -8 : 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
         style={{ zIndex: isHovered ? 0 : 1 }}
       >
         {text}
@@ -22,7 +22,7 @@ const NavItem = ({ text }) => {
         <motion.h3
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: -10 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.5 }}
           style={{ position: "relative", zIndex: 1 }}
         >
           {text}

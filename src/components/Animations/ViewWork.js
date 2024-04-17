@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import "../ProjectSection/style.css";
 const ViewWork = ({ text }) => {
   const [isHovered, setIsHovered] = useState(false);
 

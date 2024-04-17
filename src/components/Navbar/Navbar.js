@@ -20,24 +20,24 @@ const Navbar = () => {
       <h1 className="text-white font-sans text-base tbPortrait:text-lg tbMed:text-xl tbLandscape:text-2xl font-medium">
         Hi. I am Anjali
       </h1>
-      <div className="flex items-center justify-between gap-16 text-xs laptop:text-sm tbPortrait:text-base tbMed:text-lg tbLandscape:text-xl">
-        <Link to="desc" spy={true} smooth={true} duration={500}>
+      <div className="flex items-center justify-between gap-16 text-xs laptop:text-sm tbPortrait:text-sm tbMed:text-base tbLandscape:text-lg">
+        <Link to="desc" spy={true} smooth={true} duration={700}>
           <NavItem text="Objectives" />
         </Link>
         <Link
           to="projects"
           spy={true}
-          offset={100}
+          offset={-50}
           smooth={true}
-          duration={500}
+          duration={700}
         >
           <NavItem text="Projects" />
         </Link>
-        <a href="/Resume.pdf" download>
+        <a href="/Resume.pdf" target="_blank">
           <NavItem text="Resume" />
         </a>
 
-        <Link to="contact" spy={true} smooth={true} duration={500}>
+        <Link to="contact" spy={true} smooth={true} duration={900}>
           <NavItem text="Contact" />
         </Link>
       </div>
