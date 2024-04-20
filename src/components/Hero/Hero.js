@@ -19,7 +19,7 @@ const Hero = () => {
   //   enter: { opacity: 1, y: 0 },
   // };
   return (
-    <div className="h-[75vh] flex items-center py-9 tbMed:py-10 tbMed:pt-20 tbLandscape:py-12 justify-around w-screen max-w-full text-white font-sans">
+    <div className="h-[85vh] flex items-center py-10 tbMed:py-10 tbMed:pt-20 tbLandscape:py-12 justify-around w-screen max-w-full text-white font-sans">
       <motion.div
         whileTap={{ scale: 0.1 }}
         className="basis-12 self-end"
