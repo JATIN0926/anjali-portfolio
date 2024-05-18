@@ -14,7 +14,7 @@ const NavItem = ({ text }) => {
         initial={{ opacity: 1 }}
         animate={{
           opacity: isHovered ? 0 : 1,
-          y: isHovered ? -10 : 0,
+          y: isHovered ? -8 : 0,
           color: isHovered ? "black" : "white",
         }}
         transition={{ duration: 0.5 }}
@@ -24,7 +24,7 @@ const NavItem = ({ text }) => {
       </motion.h3>
       {isHovered && (
         <motion.h3
-          initial={{ opacity: 0, y: -2 }}
+          initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: -10 }}
           transition={{ duration: 0.5 }}
           style={{ position: "relative", zIndex: 1 }}

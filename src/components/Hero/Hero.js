@@ -22,7 +22,7 @@ const Hero = () => {
     <div className="h-[85vh] flex items-center py-10 tbMed:py-10 tbMed:pt-20 tbLandscape:py-12 justify-around w-screen max-w-full text-white font-sans">
       <motion.div
         whileTap={{ scale: 0.1 }}
-        className="basis-12 self-end"
+        className="basis-12 self-end pb-4"
         initial="hidden"
         animate="enter"
         variants={variants_btn}
