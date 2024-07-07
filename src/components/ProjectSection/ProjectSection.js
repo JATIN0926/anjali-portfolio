@@ -22,7 +22,7 @@ const ProjectSection = ({ data }) => {
   const variants = {
     transformY: {
       y: -85,
-      transition: { duration: 1.5, ease: [0.25, 1, 0.7, 1], delay: 0 },
+      transition: { duration: 1.5, ease: [0.33, 1, 0.68, 1], delay: 0 },
     },
     scale: {
       scale: 1,
