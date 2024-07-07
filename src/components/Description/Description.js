@@ -27,7 +27,7 @@ const Description = () => {
           width: 50,
           // scaleX: 1,
         }}
-        transition={{ ease: "easeOut", duration: 1.2, delay: 0.3 }}
+        transition={{ ease: "easeOut", duration: 2, delay: 0.3 }}
         viewport={{ once: true }}
         className="w-14 h-[80%] bg-white"
       ></motion.div>
@@ -37,7 +37,7 @@ const Description = () => {
             key={index}
             initial={{ opacity: 0, y: 5 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeOut", duration: 0.5, delay: index * 0.15 }}
+            transition={{ ease: "easeOut", duration: 0.7, delay: index * 0.15 }}
             viewport={{ once: true }}
             className="tbMed:text-xl inline-block"
           >
