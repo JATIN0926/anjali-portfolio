@@ -8,12 +8,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)"],
+        "Comic-Sans": ['"Comic Sans"', "sans-serif"],
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "design-process-bg": "url(/design_process_bg.svg)",
+        "hero-hover-bg": "url(/hero_hover_bg.svg)",
       },
       screens: {
         mbMini: "280px",

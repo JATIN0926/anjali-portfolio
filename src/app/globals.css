@@ -4,8 +4,13 @@
 
 body {
   background-color: #010208;
-  /* background-color: white; */
 }
 ::-webkit-scrollbar{
   display: none;
+}
+@font-face {
+  font-family: 'Comic Sans';
+  src: url('../fonts/ComicSansMS3.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
 }

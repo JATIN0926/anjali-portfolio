@@ -1,68 +1,121 @@
 "use client";
 import Image from "next/image";
-import { motion, useAnimationControls, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const ProjectSection = ({ data }) => {
-  const controls = useAnimationControls();
-  const controls2 = useAnimationControls();
-  const ref = useRef();
-  const isInView = useInView(ref, { amount: 0.15, once: true });
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  useEffect(() => {
-    if (isInView) {
-      const animate = async () => {
-        await controls.start("transformY");
-        await controls2.start("scale");
-      };
-      animate();
-    }
-  }, [isInView, controls, controls2]);
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
 
-  const variants = {
-    transformY: {
-      y: -85,
-      transition: { duration: 1.5, ease: [0.33, 1, 0.68, 1], delay: 0 },
-    },
-    scale: {
-      scale: 1,
-      transition: { duration: 0.2, ease: [0.25, 1, 0.5, 1] },
-    },
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
   };
 
   return (
-    <div
-      className="flex flex-col items-center justify-center gap-16 w-full max-w-full px-4 text-center text-white"
-      ref={ref}
-    >
+    <div className="flex flex-col items-center justify-center gap-16 w-screen max-w-full px-4 text-center text-white">
       {data && data.length > 0 ? (
         data.map((section, index) => (
           <motion.div
-            initial={{ scale: 0.9, y: 500 }}
-            animate={controls}
-            variants={{ transformY: variants.transformY }}
             key={index}
-            className="flex items-center justify-center w-full"
+            className={`flex items-center ${
+              section.left ? "justify-start" : "justify-end"
+            } min-h-screen px-16 w-full`}
           >
             <motion.div
-              initial={{ scale: 0.8 }}
-              animate={controls2}
-              variants={{ scale: variants.scale }}
-              className="flex flex-col items-center justify-center gap-1 h-[50vh] w-[30vw] transition-all"
+              className={`relative flex flex-col items-center justify-center gap-3 w-[40%] transition-all ${
+                section.lock ? "hover:grayscale" : ""
+              }`}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
             >
-              <div className="flex flex-col items-start justify-end w-full gap-2">
-                <h1 className="text-base font-medium uppercase">
-                  {section.title}
-                </h1>
-              </div>
-              <div className="relative w-full h-full">
+              {section.lock ? (
+                <button
+                  className={`bg-[#D0D1D7] text-[#5D5D5D] font-bold p-5 px-8 rounded-full z-50 absolute top-[45%] -right-[9rem] -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-opacity duration-500 ${
+                    hoveredIndex === index ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  Under NDA
+                </button>
+              ) : (
                 <Image
                   priority
-                  fill
-                  className="object-cover"
-                  src={section.image_src}
+                  width={30}
+                  height={30}
+                  className={`object-cover z-50 w-[5rem] h-[5rem] absolute top-1/2 -right-[5rem] -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-opacity duration-500 ${
+                    hoveredIndex === index ? "opacity-100" : "opacity-0"
+                  }`}
+                  src="/ArrowIcon.svg"
                   alt=""
                 />
+              )}
+
+              <div
+                className={`relative w-full cursor-pointer justify-self-start transition-all ${
+                  section.left ? "aspect-square" : "aspect-[4/3]"
+                }`}
+              >
+                {section.video ? (
+                  <>
+                    <video
+                      src={section.video}
+                      width="100%"
+                      className={`object-cover aspect-square transition-opacity duration-500 ${
+                        hoveredIndex === index ? "opacity-0" : "opacity-100"
+                      }`}
+                      autoPlay
+                      loop
+                      muted
+                    ></video>
+                    <Image
+                      priority
+                      fill
+                      className={`object-cover transition-opacity duration-500 absolute inset-0 ${
+                        hoveredIndex === index ? "opacity-100" : "opacity-0"
+                      }`}
+                      src={section.image_src}
+                      alt=""
+                    />
+                  </>
+                ) : (
+                  <Image
+                    priority
+                    fill
+                    className={`object-cover transition-opacity duration-500 ${
+                      hoveredIndex === index ? "opacity-100" : "opacity-100"
+                    }`}
+                    src={section.image_src}
+                    alt=""
+                  />
+                )}
+              </div>
+
+              <div className="w-full flex items-center justify-between">
+                <div className="flex flex-col items-start justify-center w-full">
+                  <h1 className="text-lg font-semibold">{section.title}</h1>
+                  <p className="text-[#FDC52C] text-base font-medium">
+                    {section.description}
+                  </p>
+                </div>
+                {section.lock ? (
+                  <div
+                    className={`transition-opacity duration-500 ${
+                      hoveredIndex === index ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <Image
+                      width={40}
+                      height={40}
+                      className="object-cover"
+                      src="/LockKey.png"
+                      alt=""
+                    />
+                  </div>
+                ) : (
+                  <></>
+                )}
               </div>
             </motion.div>
           </motion.div>

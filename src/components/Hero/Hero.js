@@ -83,7 +83,7 @@ const Hero = () => {
           animate="enter"
           transition={{ ease: "easeOut", delay: 0.8, duration: 1.2 }}
           variants={variants}
-          className="text-[0.6rem] leading-4 mbSmall:text-sm mbMedium:text-base laptop:text-lg tbPortrait:text-[1rem]  tbMed:text-lg tbLandscape:text-[1.7rem] font-medium"
+          className="text-[0.6rem] text-white  leading-4 mbSmall:text-sm mbMedium:text-base laptop:text-lg tbPortrait:text-[1rem]  tbMed:text-lg tbLandscape:text-[1.7rem] font-medium"
         >
           Let’s make your Product visible
         </motion.p>

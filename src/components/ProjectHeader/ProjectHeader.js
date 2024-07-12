@@ -4,7 +4,7 @@ const ProjectHeader = () => {
   return (
     <div
       id="projects"
-      className="w-full h-[75vh] flex flex-col justify-center items-start gap-4 p-8 font-medium text-white"
+      className="w-full h-[75vh] flex flex-col justify-center items-start gap-4 p-8 pl-[3rem] font-medium text-white"
     >
       <motion.h2
         className="text-7xl w-[50%]"

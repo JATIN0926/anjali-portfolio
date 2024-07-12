@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import FooterItem from "../Animations/FooterItem";
 import { Link } from "react-scroll";
+import FlipLink from "../Animations/FlipLink";
 const Footer = () => {
   return (
     <div
@@ -11,16 +11,16 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-between h-[75%] w-[60%] mt-12">
         <div className="flex items-center justify-between w-full font-medium">
           <h1 className="uppercase text-xl cursor-pointer">
-            <FooterItem text="LinkedIn" />
+            <FlipLink>LinkedIn</FlipLink>
           </h1>
           <h1 className="uppercase text-lg  cursor-pointer">
-            <FooterItem text="Email" />
+            <FlipLink>Email</FlipLink>
           </h1>
           <h1 className="uppercase text-lg  cursor-pointer">
-            <FooterItem text="Behance" />
+            <FlipLink>Behance</FlipLink>
           </h1>
           <h1 className="text-lg cursor-pointer">
-            <FooterItem text="INSTAGRAM" />
+            <FlipLink>INSTAGRAM</FlipLink>
           </h1>
         </div>
         <div className="flex items-center justify-center w-full">
