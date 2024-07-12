@@ -35,7 +35,7 @@ const Navbar = () => {
       <div
         className={` rotate-12 absolute left-[5%] top-[30%]  ${
           isHovered ? "opacity-100 scale-100" : "opacity-0 scale-50"
-        } transition-all`}
+        } transition-all duration-300`}
       >
         <Image src="/dp_7.svg" alt="img" height={130} width={130} />
       </div>
@@ -52,12 +52,12 @@ const Navbar = () => {
         animate="enter"
         variants={variants}
         transition={{ type: "linear", delay: 0.1, duration: 1 }}
-        className="h-24 text-white flex items-center justify-around gap-48 w-screen max-w-full"
+        className="h-24 text-white flex items-center justify-between px-16 w-screen max-w-full"
       >
         <div
-          className={`text-white hover_text cursor-pointer z-40 flex items-center justify-center gap-3 font-sans text-base tbPortrait:text-lg tbMed:text-xl tbLandscape:text-2xl font-medium ${
+          className={`text-white hover_text hover:text-blue-900 cursor-pointer z-40 flex items-center justify-center gap-3 font-sans text-base tbPortrait:text-lg tbMed:text-xl tbLandscape:text-2xl font-medium ${
             isHovered ? "opacity-0" : "opacity-100"
-          } transition-all`}
+          } transition-all duration-300`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -82,7 +82,7 @@ const Navbar = () => {
           </a>
 
           <Link to="contact" spy={true} smooth={true} duration={900}>
-            <FlipLink>contact</FlipLink>
+            <FlipLink>Contact</FlipLink>
           </Link>
         </div>
       </motion.div>

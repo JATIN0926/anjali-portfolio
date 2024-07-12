@@ -15,21 +15,23 @@ const ProjectSection = ({ data }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-16 w-screen max-w-full px-4 text-center text-white">
+    <div className="flex flex-col items-center justify-center gap-16 w-screen max-w-full px-36 pr-[11rem] text-center text-white">
       {data && data.length > 0 ? (
         data.map((section, index) => (
           <motion.div
             key={index}
             className={`flex items-center ${
               section.left ? "justify-start" : "justify-end"
-            } min-h-screen px-16 w-full`}
+            } min-h-[50vh] px-16 w-full`}
+           
           >
             <motion.div
-              className={`relative flex flex-col items-center justify-center gap-3 w-[40%] transition-all ${
+              className={`relative flex flex-col items-center justify-center gap-3 w-[30%] transition-all ${
                 section.lock ? "hover:grayscale" : ""
               }`}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
+              
             >
               {section.lock ? (
                 <button
@@ -53,8 +55,8 @@ const ProjectSection = ({ data }) => {
               )}
 
               <div
-                className={`relative w-full cursor-pointer justify-self-start transition-all ${
-                  section.left ? "aspect-square" : "aspect-[4/3]"
+                className={`relative ${section.left?"w-[150%]":"w-[185%]"}   cursor-pointer justify-self-start transition-all ${
+                  section.left ? "aspect-[3/4]" : "aspect-[4/3]"
                 }`}
               >
                 {section.video ? (
@@ -62,7 +64,7 @@ const ProjectSection = ({ data }) => {
                     <video
                       src={section.video}
                       width="100%"
-                      className={`object-cover aspect-square transition-opacity duration-500 ${
+                      className={`object-cover aspect-[3/4] transition-opacity duration-200 ${
                         hoveredIndex === index ? "opacity-0" : "opacity-100"
                       }`}
                       autoPlay
@@ -72,7 +74,7 @@ const ProjectSection = ({ data }) => {
                     <Image
                       priority
                       fill
-                      className={`object-cover transition-opacity duration-500 absolute inset-0 ${
+                      className={`object-cover transition-opacity duration-200 absolute inset-0 ${
                         hoveredIndex === index ? "opacity-100" : "opacity-0"
                       }`}
                       src={section.image_src}
@@ -83,7 +85,7 @@ const ProjectSection = ({ data }) => {
                   <Image
                     priority
                     fill
-                    className={`object-cover transition-opacity duration-500 ${
+                    className={`object-cover transition-opacity duration-200 ${
                       hoveredIndex === index ? "opacity-100" : "opacity-100"
                     }`}
                     src={section.image_src}
@@ -92,10 +94,10 @@ const ProjectSection = ({ data }) => {
                 )}
               </div>
 
-              <div className="w-full flex items-center justify-between">
+              <div className={` ${section.left?"w-[150%]":"w-[185%]"} flex items-center justify-between`}>
                 <div className="flex flex-col items-start justify-center w-full">
                   <h1 className="text-lg font-semibold">{section.title}</h1>
-                  <p className="text-[#FDC52C] text-base font-medium">
+                  <p className="text-[#FDC52C] text-base font-semibold">
                     {section.description}
                   </p>
                 </div>

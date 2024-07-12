@@ -13,11 +13,11 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Description />
-      <DesignProcess />
       <ProjectHeader />
       <div>
         <ProjectSection data={data.data} />
       </div>
+      <DesignProcess />
       <Footer />
     </div>
   );

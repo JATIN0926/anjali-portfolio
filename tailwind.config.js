@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "Comic-Sans": ['"Comic Sans"', "sans-serif"],
+        "Inter-Medium": ['"Inter Medium"', "sans-serif"],
       },
       backgroundImage: {
         "design-process-bg": "url(/design_process_bg.svg)",

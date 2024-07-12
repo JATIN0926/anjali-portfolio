@@ -19,7 +19,7 @@ const Hero = () => {
   //   enter: { opacity: 1, y: 0 },
   // };
   return (
-    <div className="h-[85vh] flex items-center py-10 tbMed:py-10 tbMed:pt-20 tbLandscape:py-12 justify-around w-screen max-w-full text-white font-sans">
+    <div className="h-[85vh] font-Inter-Medium flex items-center py-10 tbMed:py-10 tbMed:pt-20 tbLandscape:py-12 justify-between px-16 w-screen max-w-full text-white">
       <motion.div
         whileTap={{ scale: 0.1 }}
         className="basis-12 self-end pb-4"
@@ -49,7 +49,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div className="flex basis-6/12 flex-col items-end justify-start gap-4 self-start">
-        <div className="flex test flex-col items-end justify-center gap-3 uppercase text-4xl mbSmall:text-5xl mbMedium:text-6xl laptop:text-7xl tbPortrait:text-8xl tbMed:text-[7rem] tbLandscape:text-[9.5rem] font-medium relative tracking-tighter">
+        <div className="flex test flex-col items-end justify-center gap-4 uppercase text-4xl mbSmall:text-5xl mbMedium:text-6xl laptop:text-7xl tbPortrait:text-8xl tbMed:text-[7rem] tbLandscape:text-[9.5rem] font-medium relative tracking-tighter">
           <motion.h1
             initial="hidden"
             animate="enter"
