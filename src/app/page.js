@@ -12,12 +12,12 @@ export default function Home() {
     <div className="flex flex-col gap-8 max-w-[100vw]">
       <Navbar />
       <Hero />
+      <DesignProcess />
       <Description />
       <ProjectHeader />
       <div>
         <ProjectSection data={data.data} />
       </div>
-      <DesignProcess />
       <Footer />
     </div>
   );

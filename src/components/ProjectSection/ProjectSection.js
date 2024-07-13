@@ -2,60 +2,87 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
 
 const ProjectSection = ({ data }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredArrowIndex, setHoveredArrowIndex] = useState(null);
 
-  const handleMouseEnter = (index) => {
+  const handleCardMouseEnter = (index) => {
     setHoveredIndex(index);
+    setHoveredArrowIndex(null); // Reset arrow hover state
   };
 
-  const handleMouseLeave = () => {
+  const handleCardMouseLeave = () => {
     setHoveredIndex(null);
+    setHoveredArrowIndex(null); // Reset arrow hover state
+  };
+
+  const handleArrowMouseEnter = (index) => {
+    setHoveredArrowIndex(index);
+  };
+
+  const handleArrowMouseLeave = () => {
+    setHoveredArrowIndex(null);
   };
 
   return (
     <div className="flex flex-col items-center justify-center gap-16 w-screen max-w-full px-36 pr-[11rem] text-center text-white">
       {data && data.length > 0 ? (
-        data.map((section, index) => (
-          <motion.div
-            key={index}
-            className={`flex items-center ${
-              section.left ? "justify-start" : "justify-end"
-            } min-h-[50vh] px-16 w-full`}
-           
-          >
+        data.map((section, index) => {
+          const isCardHovered = hoveredIndex === index;
+          const isArrowHovered = hoveredArrowIndex === index;
+
+          const Content = (
             <motion.div
-              className={`relative flex flex-col items-center justify-center gap-3 w-[30%] transition-all ${
+              className={`relative flex flex-col items-center justify-center gap-3 transition-all ${
                 section.lock ? "hover:grayscale" : ""
               }`}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
-              
+              onMouseEnter={() => handleCardMouseEnter(index)}
+              onMouseLeave={handleCardMouseLeave}
             >
               {section.lock ? (
                 <button
-                  className={`bg-[#D0D1D7] text-[#5D5D5D] font-bold p-5 px-8 rounded-full z-50 absolute top-[45%] -right-[9rem] -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-opacity duration-500 ${
-                    hoveredIndex === index ? "opacity-100" : "opacity-0"
+                  className={`bg-[#D0D1D7] text-[#5D5D5D] font-bold p-5 px-8 rounded-full z-50 absolute top-[45%] -right-[15rem] -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-opacity duration-500 ${
+                    isCardHovered ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  Under NDA
+                  {section.lock_text}
                 </button>
               ) : (
-                <Image
-                  priority
-                  width={30}
-                  height={30}
-                  className={`object-cover z-50 w-[5rem] h-[5rem] absolute top-1/2 -right-[5rem] -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-opacity duration-500 ${
-                    hoveredIndex === index ? "opacity-100" : "opacity-0"
-                  }`}
-                  src="/ArrowIcon.svg"
-                  alt=""
-                />
+                <div className="relative">
+                  {isCardHovered && !isArrowHovered ? (
+                    <Image
+                      priority
+                      width={40}
+                      height={40}
+                      className={`object-cover z-50 w-[6rem] h-[6rem] absolute top-1/2 ${
+                        section.left ? "-right-[10rem]" : "-right-[13rem]"
+                      } -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-opacity duration-500`}
+                      src="/ArrowIcon.svg"
+                      alt=""
+                    />
+                  ) : (
+                    <Image
+                      priority
+                      width={40}
+                      height={40}
+                      className={`object-cover z-50 w-[6rem] h-[6rem] absolute top-1/2 ${
+                        section.left ? "-right-[10rem]" : "-right-[13rem]"
+                      } -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-opacity duration-500 ${
+                        isArrowHovered ? "opacity-0" : "opacity-100"
+                      }`}
+                      src="/ArrowIconYellow.svg"
+                      alt=""
+                    />
+                  )}
+                </div>
               )}
 
               <div
-                className={`relative ${section.left?"w-[150%]":"w-[185%]"}   cursor-pointer justify-self-start transition-all ${
+                className={`relative ${
+                  section.left ? "w-[150%]" : "w-[185%]"
+                } cursor-pointer justify-self-start transition-all ${
                   section.left ? "aspect-[3/4]" : "aspect-[4/3]"
                 }`}
               >
@@ -65,7 +92,7 @@ const ProjectSection = ({ data }) => {
                       src={section.video}
                       width="100%"
                       className={`object-cover aspect-[3/4] transition-opacity duration-200 ${
-                        hoveredIndex === index ? "opacity-0" : "opacity-100"
+                        isCardHovered ? "opacity-0" : "opacity-100"
                       }`}
                       autoPlay
                       loop
@@ -75,7 +102,7 @@ const ProjectSection = ({ data }) => {
                       priority
                       fill
                       className={`object-cover transition-opacity duration-200 absolute inset-0 ${
-                        hoveredIndex === index ? "opacity-100" : "opacity-0"
+                        isCardHovered ? "opacity-100" : "opacity-0"
                       }`}
                       src={section.image_src}
                       alt=""
@@ -86,7 +113,7 @@ const ProjectSection = ({ data }) => {
                     priority
                     fill
                     className={`object-cover transition-opacity duration-200 ${
-                      hoveredIndex === index ? "opacity-100" : "opacity-100"
+                      isCardHovered ? "opacity-100" : "opacity-100"
                     }`}
                     src={section.image_src}
                     alt=""
@@ -94,7 +121,11 @@ const ProjectSection = ({ data }) => {
                 )}
               </div>
 
-              <div className={` ${section.left?"w-[150%]":"w-[185%]"} flex items-center justify-between`}>
+              <div
+                className={`${
+                  section.left ? "w-[150%]" : "w-[185%]"
+                } flex items-center justify-between`}
+              >
                 <div className="flex flex-col items-start justify-center w-full">
                   <h1 className="text-lg font-semibold">{section.title}</h1>
                   <p className="text-[#FDC52C] text-base font-semibold">
@@ -104,7 +135,7 @@ const ProjectSection = ({ data }) => {
                 {section.lock ? (
                   <div
                     className={`transition-opacity duration-500 ${
-                      hoveredIndex === index ? "opacity-100" : "opacity-0"
+                      isCardHovered ? "opacity-100" : "opacity-0"
                     }`}
                   >
                     <Image
@@ -120,8 +151,29 @@ const ProjectSection = ({ data }) => {
                 )}
               </div>
             </motion.div>
-          </motion.div>
-        ))
+          );
+
+          return (
+            <motion.div
+              key={index}
+              className={`flex items-center ${
+                section.left ? "justify-start" : "justify-end"
+              } min-h-[50vh] px-16 w-full`}
+            >
+              {section.link ? (
+                <Link
+                  href={section.link}
+                  target="_blank"
+                  className="block w-[30%]"
+                >
+                  {Content}
+                </Link>
+              ) : (
+                <div className="block w-[30%]">{Content}</div>
+              )}
+            </motion.div>
+          );
+        })
       ) : (
         <p className="text-white">Loading data...</p>
       )}

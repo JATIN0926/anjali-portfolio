@@ -49,7 +49,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div className="flex basis-6/12 flex-col items-end justify-start gap-4 self-start">
-        <div className="flex test flex-col items-end justify-center gap-4 uppercase text-4xl mbSmall:text-5xl mbMedium:text-6xl laptop:text-7xl tbPortrait:text-8xl tbMed:text-[7rem] tbLandscape:text-[9.5rem] font-medium relative tracking-tighter">
+        <div className="flex test flex-col items-end justify-center gap-4 uppercase text-4xl mbSmall:text-5xl mbMedium:text-6xl laptop:text-7xl tbPortrait:text-[6.5rem] tbMed:text-[7.5rem] tbLandscape:text-[9.5rem] font-medium relative tracking-tighter">
           <motion.h1
             initial="hidden"
             animate="enter"

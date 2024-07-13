@@ -4,7 +4,7 @@ const ProjectHeader = () => {
   return (
     <div
       id="projects"
-      className="w-full min-h-[90vh] flex flex-col justify-center items-start gap-4 p-8 pl-[3rem] font-medium text-white"
+      className="w-full min-h-[90vh] flex flex-col justify-center items-start gap-4 p-8 pl-[3.5rem] font-medium text-white"
     >
       <motion.h2
         className="text-7xl w-[50%]"
@@ -16,7 +16,7 @@ const ProjectHeader = () => {
         transition={{ ease: "easeOut", delay: 0.1, duration: 1 }}
         whileInView={{
           opacity: 1,
-          y: 0, // Animate to full opacity when in view
+          y: 0, 
         }}
         viewport={{ once: true }}
       >
@@ -32,7 +32,7 @@ const ProjectHeader = () => {
         transition={{ ease: "easeOut", delay: 0.2, duration: 1 }}
         whileInView={{
           opacity: 1,
-          y: 0, // Animate to full opacity when in view
+          y: 0, 
         }}
         viewport={{ once: true }}
       >
@@ -47,7 +47,7 @@ const ProjectHeader = () => {
         transition={{ ease: "easeOut", delay: 0.5, duration: 1 }}
         whileInView={{
           opacity: 1,
-          y: 0, // Animate to full opacity when in view
+          y: 0, 
         }}
         viewport={{ once: true }}
       >

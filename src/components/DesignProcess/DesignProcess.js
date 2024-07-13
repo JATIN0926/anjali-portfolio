@@ -58,10 +58,10 @@ const DesignProcess = () => {
   return (
     <div
       ref={sectionRef}
-      className="text-white px-9 my-32 min-h-screen w-screen max-w-full flex flex-col items-center justify-center gap-[8rem] p-6"
+      className="text-white px-9 my-32 mt-36 min-h-[200vh] w-screen max-w-full flex flex-col items-center justify-center gap-[8rem] p-6"
     >
-      <div className="w-full flex items-end justify-between">
-        <h1 className="text-6xl font-medium leading-[4rem] w-[45%] uppercase">
+      <div className="w-[95%] flex items-end justify-between">
+        <h1 className="text-6xl font-medium leading-[4rem] w-[55%] uppercase">
           A Peek into My Design Process
         </h1>
         <p className="w-[35%]">

@@ -1,14 +1,6 @@
 {
   "data": [
     {
-      "image_src": "/Restaurant.svg",
-      "title": "Restaurant management",
-      "description": "Dashboard & Problem solving",
-      "link": "https://dribbble.com/shots/21685074--Fintrack-Catch-the-Groove-of-Seamless-Money-Transfers",
-      "left":false,
-      "lock":true
-    },
-    {
       "image_src": "/Financier.svg",
       "title": "Financier - A money manager",
       "description": "App & Research",
@@ -17,11 +9,12 @@
       "video":"/Financier.mp4"
     },
     {
-      "image_src": "/kiit.svg",
-      "title": "KIIT college community",
-      "description": "Website & Problem solving",
-      "link": "https://www.figma.com/proto/3BFllrcoZuu9iiOeBSG11X/Great-designer-instagram-post?type=design&node-id=398-893&t=4v92TbGllYZ8pPhE-0&scaling=min-zoom&page-id=0%3A1&fuid=1340230875902518163",
-      "left":false
+      "image_src": "/Restaurant.svg",
+      "title": "Restaurant management",
+      "description": "Dashboard & Problem solving",
+      "left":false,
+      "lock":true,
+      "lock_text":"Under NDA"
     },
     {
       "image_src": "/fintrack.svg",
@@ -32,27 +25,37 @@
       "video":"/Fintrack.mp4"
     },
     {
-      "image_src": "/focus_matrix.svg",
-      "title": "Focus Matrix - A Productivity management.",
-      "description": "Dashboard & Asthetics",
-      "link": "https://www.figma.com/proto/3BFllrcoZuu9iiOeBSG11X/Great-designer-instagram-post?type=design&node-id=398-893&t=4v92TbGllYZ8pPhE-0&scaling=min-zoom&page-id=0%3A1&fuid=1340230875902518163",
+      "image_src": "/kiit.svg",
+      "title": "KIIT college community",
+      "description": "Website & Problem solving",
+      "link": "/kiit.pdf",
       "left":false
     },
     {
       "image_src": "/Vama.svg",
       "title": "VAMA - An astrologer",
       "description": "UX/UI audit",
-      "link": "https://www.figma.com/proto/3BFllrcoZuu9iiOeBSG11X/Great-designer-instagram-post?type=design&node-id=398-1823&t=4v92TbGllYZ8pPhE-0&scaling=min-zoom&page-id=0%3A1",
+      "link": "/vama.pdf",
       "left":true,
       "video":"/vamaVideo.mp4"
     },
+    {
+      "image_src": "/focus_matrix.svg",
+      "title": "Focus Matrix - A Productivity management.",
+      "description": "Dashboard & Asthetics",
+      "link": "https://www.figma.com/proto/3BFllrcoZuu9iiOeBSG11X/Great-designer-instagram-post?type=design&node-id=398-893&t=4v92TbGllYZ8pPhE-0&scaling=min-zoom&page-id=0%3A1&fuid=1340230875902518163",
+      "left":false
+    },
+    
     
     {
-      "image_src": "/starbucks.svg",
+      "image_src": "/starbucks.png",
       "title": "Starbucks Redesign",
       "description": "Coming soon....",
       "link": "https://www.figma.com/proto/3BFllrcoZuu9iiOeBSG11X/Great-designer-instagram-post?type=design&node-id=398-1607&t=4v92TbGllYZ8pPhE-0&scaling=min-zoom&page-id=0%3A1",
-      "left":false
+      "left":true,
+      "lock":true,
+      "lock_text":"Coming Soon"
     }
   ]
 }
