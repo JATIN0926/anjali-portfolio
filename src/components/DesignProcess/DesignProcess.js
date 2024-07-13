@@ -58,6 +58,7 @@ const DesignProcess = () => {
   return (
     <div
       ref={sectionRef}
+      id="process"
       className="text-white px-9 my-32 mt-36 min-h-[200vh] w-screen max-w-full flex flex-col items-center justify-center gap-[8rem] p-6"
     >
       <div className="w-[95%] flex items-end justify-between">

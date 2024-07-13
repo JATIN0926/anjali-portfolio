@@ -77,6 +77,9 @@ const Navbar = () => {
           >
             <FlipLink>Projects</FlipLink>
           </Link>
+          <Link to="process" spy={true} smooth={true} duration={900}>
+            <FlipLink>Process</FlipLink>
+          </Link>
           <a href="/Resume.pdf" target="_blank">
             <FlipLink>Resume</FlipLink>
           </a>
