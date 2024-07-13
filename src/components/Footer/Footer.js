@@ -14,7 +14,9 @@ const Footer = () => {
             <FlipLink>LinkedIn</FlipLink>
           </h1>
           <h1 className="uppercase text-lg  cursor-pointer">
+          <a href="mailto:anjalikum116@gmail.com">
             <FlipLink>Email</FlipLink>
+          </a>
           </h1>
           <h1 className="uppercase text-lg  cursor-pointer">
             <FlipLink>Behance</FlipLink>
