@@ -83,10 +83,9 @@ const Navbar = () => {
           <a href="/Resume.pdf" target="_blank">
             <FlipLink>Resume</FlipLink>
           </a>
-
-          <Link to="contact" spy={true} smooth={true} duration={900}>
+          <a href="mailto:anjalikum116@gmail.com">
             <FlipLink>Contact</FlipLink>
-          </Link>
+          </a>
         </div>
       </motion.div>
     </div>
