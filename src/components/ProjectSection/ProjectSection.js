@@ -48,7 +48,7 @@ const ProjectSection = ({ data }) => {
                         priority
                         width={30}
                         height={30}
-                        className={`object-cover hover:opacity-80 z-50 w-[7rem] h-[7rem] absolute top-1/2 ${
+                        className={`object-cover hover:opacity-90 z-50 w-[7rem] h-[7rem] absolute top-1/2 ${
                           section.left ? "-right-[11rem]" : "-right-[14rem]"
                         } -translate-x-1/2 -translate-y-[70%] cursor-pointer transition-opacity duration-500 ${
                           hoveredIndex === index ? "opacity-100" : "opacity-0"
