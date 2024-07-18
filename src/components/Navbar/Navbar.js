@@ -16,6 +16,19 @@ const Navbar = () => {
     setIsHovered(false);
   };
 
+  const colorVariants = {
+    animate: {
+      color: ["#ffffff", "#D72365", "#8D47E7", "#2C6DD3", "#6BCDEC"],
+      opacity: [1, 0.7, 0.7, 0.7, 0.7, 1],
+      transition: {
+        duration: 8,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+      },
+    },
+  };
+
   const variants = {
     hidden: { opacity: 0 },
     enter: { opacity: 1 },
@@ -28,23 +41,23 @@ const Navbar = () => {
         alt="img"
         width={20}
         height={20}
-        className={` h-[200vh] transition-all w-[100vw] -z-10 absolute duration-300 top-0 ${
+        className={`h-[200vh] transition-all w-[100vw] -z-10 absolute duration-300 top-0 ${
           isHovered ? "opacity-100" : "opacity-0"
         }`}
       />
       <div
-        className={` rotate-12 absolute left-[5%] top-[30%]  ${
+        className={`rotate-12 absolute left-[5%] top-[30%] ${
           isHovered ? "opacity-100 scale-100" : "opacity-0 scale-50"
         } transition-all duration-300`}
       >
         <Image src="/dp_7.svg" alt="img" height={130} width={130} />
       </div>
       <button
-        className={` rounded px-5 transition-all duration-300 -rotate-[10deg] absolute top-[200%] left-[5%] bg-white p-2 border-4 border-[#EAAA9E] ${
+        className={`rounded px-5 transition-all duration-300 -rotate-[10deg] absolute top-[200%] left-[5%] bg-white p-2 border-4 border-[#EAAA9E] ${
           isHovered ? "scale-100 opacity-100" : "scale-50 opacity-0"
         }`}
       >
-        <p className="text-xl font-bold font-Comic-Sans "> 👋 Hi. I am Anjali</p>
+        <p className="text-xl font-bold font-Comic-Sans">👋 Hi. I am Anjali</p>
       </button>
       <motion.div
         id="nav"
@@ -55,14 +68,20 @@ const Navbar = () => {
         className="h-24 text-white flex items-center justify-between px-16 w-screen max-w-full"
       >
         <div
-          className={`text-white hover_text hover:text-blue-900 cursor-pointer z-40 flex items-center justify-center gap-3 font-sans text-base tbPortrait:text-lg tbMed:text-xl tbLandscape:text-2xl font-medium ${
+          className={`cursor-pointer z-40 flex items-center justify-center gap-3 font-sans text-base tbPortrait:text-lg tbMed:text-xl tbLandscape:text-2xl font-medium ${
             isHovered ? "opacity-0" : "opacity-100"
           } transition-all duration-300`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
           <Image src="/dp_7.svg" alt="img" height={30} width={30} />
-          Hover me
+          <motion.span
+            initial="initial"
+            animate="animate"
+            variants={colorVariants}
+          >
+            Hover me
+          </motion.span>
         </div>
         <div className="flex items-center justify-between gap-16 text-xs laptop:text-sm tbPortrait:text-sm tbMed:text-base tbLandscape:text-lg">
           <Link to="desc" spy={true} smooth={true} duration={700}>

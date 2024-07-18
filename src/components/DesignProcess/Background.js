@@ -2,7 +2,7 @@ import React from "react";
 
 const Background = ({ children }) => {
   return (
-    <div className=" bg-design-process-bg bg-center bg-cover h-[111vh] w-[55%] flex items-center justify-center">
+    <div className=" bg-design-process-bg bg-center bg-cover h-[98vh] w-[48%] flex items-center justify-center">
       {children}
     </div>
   );
