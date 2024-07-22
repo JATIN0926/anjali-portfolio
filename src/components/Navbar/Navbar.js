@@ -102,7 +102,7 @@ const Navbar = () => {
           <a href="/Resume.pdf" target="_blank">
             <FlipLink>Resume</FlipLink>
           </a>
-          <a href="mailto:anjalikum116@gmail.com">
+          <a href="mailto:Anjali.productdesign@gmail.com">
             <FlipLink>Contact</FlipLink>
           </a>
         </div>
