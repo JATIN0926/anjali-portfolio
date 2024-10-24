@@ -1,6 +1,13 @@
 {
   "data": [
     {
+      "image_src": "/sass_banking.jpg",
+      "title": "Case Study & Insights",
+      "description": "SaaS Banking Dashboard",
+      "link": "https://medium.com/@anjalikum116/my-experience-in-evolving-a-saas-banking-platform-0ca9b3ea0139",
+      "left":false
+    },
+    {
       "image_src": "/Financier.svg",
       "title": "Financier - A money manager",
       "description": "App & Research",
