@@ -5,63 +5,62 @@
       "title": "Case Study & Insights",
       "description": "SaaS Banking Dashboard",
       "link": "https://medium.com/@anjalikum116/my-experience-in-evolving-a-saas-banking-platform-0ca9b3ea0139",
-      "left":false
+      "left": false
     },
     {
       "image_src": "/Financier.svg",
       "title": "Financier - A money manager",
       "description": "App & Research",
-      "link": "https://www.behance.net/gallery/174519889/Financier-A-Money-management-app",
-      "left":true,
-      "video":"/Financier.mp4"
+      "link": "https://www.behance.net/gallery/182107575/Financier-Money-management-app",
+      "left": true,
+      "video": "/Financier.mp4"
     },
     {
       "image_src": "/Restaurant.svg",
       "title": "Restaurant management",
       "description": "SaaS dashboard for US market",
-      "left":false,
-      "lock":true,
-      "lock_text":"Under NDA"
+      "left": false,
+      "lock": true,
+      "lock_text": "Under NDA"
     },
     {
       "image_src": "/fintrack.svg",
       "title": "Fintrack - Money transfer app",
       "description": "App & Interaction",
-      "link": "https://dribbble.com/shots/21685074--Fintrack-Catch-the-Groove-of-Seamless-Money-Transfers",
-      "left":true,
-      "video":"/Fintrack.mp4"
+      "link": "https://www.instagram.com/reel/CtPC_WfpNsQ/?igsh=b3hxdGxkYmpvNGcx",
+      "left": true,
+      "video": "/Fintrack.mp4"
     },
     {
       "image_src": "/kiit.svg",
       "title": "KIIT college community",
       "description": "Website & Problem solving",
       "link": "/kiit.pdf",
-      "left":false
+      "left": false
     },
     {
       "image_src": "/Vama.svg",
       "title": "VAMA - An astrologer app",
       "description": "UX/UI audit",
       "link": "/vama.pdf",
-      "left":true,
-      "video":"/vamaVideo.mp4"
+      "left": true,
+      "video": "/vamaVideo.mp4"
     },
     {
       "image_src": "/focus_matrix.svg",
       "title": "Focus Matrix - A Productivity management.",
       "description": "Dashboard & Asthetics",
-      "link": "https://www.behance.net/gallery/204500297/FocusMatrix-Productivity-Dashboard",
-      "left":false
+      "link": "https://www.behance.net/gallery/209929941/FocusMatrix-Productivity-WebApp-Dashboard",
+      "left": false
     },
-    
-    
+
     {
       "image_src": "/starbucks.png",
       "title": "Starbucks Redesign",
       "description": "Coming soon....",
-      "left":true,
-      "lock":true,
-      "lock_text":"Coming Soon"
+      "left": true,
+      "lock": true,
+      "lock_text": "Coming Soon"
     }
   ]
 }
